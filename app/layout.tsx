@@ -47,6 +47,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
+            <head>
+                <meta name="apple-mobile-web-app-title" content="Antoine Souesme" />
+            </head>
+
             <body>{children}</body>
 
             {/* https://vercel.com/docs/analytics/package */}
