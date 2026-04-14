@@ -5,13 +5,13 @@ const Footer = () => {
 
   const links = [
     { label: "Accueil", href: "/" },
-    { label: "Developpeur freelance Bretagne", href: "/developpeur-freelance-bretagne" },
+    { label: "Développeur freelance Bretagne", href: "/developpeur-freelance-bretagne" },
     {
-      label: "Creation de site internet sur mesure",
+      label: "Création de site internet sur mesure",
       href: "/creation-site-internet-sur-mesure-bretagne",
     },
     {
-      label: "Developpement logiciel sur mesure",
+      label: "Développement logiciel sur mesure",
       href: "/developpement-logiciel-sur-mesure-bretagne",
     },
     { label: "Contact", href: "/#contact" },
@@ -26,13 +26,13 @@ const Footer = () => {
               Antoine Souesme
             </h3>
             <p className="text-slate-400 leading-relaxed">
-              Developpeur freelance en Centre Bretagne pour sites internet et
+              Développeur freelance en Centre Bretagne pour sites internet et
               logiciels sur mesure.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Navigation SEO</h4>
+            <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               {links.map((item) => (
                 <li key={item.label}>
@@ -62,9 +62,9 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {currentYear} Antoine Souesme. Tous droits reserves.
+            © {currentYear} Antoine Souesme. Tous droits réservés.
           </p>
-          <p className="text-slate-500 text-sm">Developpe en Next.js et TypeScript</p>
+          <p className="text-slate-500 text-sm">Développé en Next.js et TypeScript</p>
         </div>
       </div>
     </footer>

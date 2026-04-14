@@ -15,36 +15,36 @@ const path = "/creation-site-internet-sur-mesure-bretagne";
 
 const faqItems = [
   {
-    question: "Combien coute un site internet sur mesure en Bretagne ?",
+    question: "Combien coûte un site internet sur mesure en Bretagne ?",
     answer:
-      "Le budget depend du niveau de personnalisation, des integrations et des objectifs business. Un cadrage initial permet de fixer un plan clair.",
+      "Le budget dépend du niveau de personnalisation, des intégrations et des objectifs business. Un cadrage initial permet de fixer un plan clair.",
   },
   {
-    question: "Quel delai pour creer un site internet ?",
+    question: "Quel délai pour créer un site internet ?",
     answer:
-      "Un site vitrine peut etre livre en quelques semaines. Les plateformes plus avancees necessitent un planning detaille par lots.",
+      "Un site vitrine peut être livré en quelques semaines. Les plateformes plus avancées nécessitent un planning détaillé par lots.",
   },
   {
-    question: "Le site sera-t-il optimise pour le SEO local ?",
+    question: "Le site sera-t-il optimisé pour le SEO local ?",
     answer:
-      "Oui, la structure technique et editoriale est preparee pour viser les requetes locales en Bretagne et Centre Bretagne.",
+      "Oui, la structure technique et éditoriale est préparée pour viser les requêtes locales en Bretagne et Centre Bretagne.",
   },
   {
     question: "Pouvez-vous reprendre un site existant ?",
     answer:
-      "Oui, je peux effectuer une refonte partielle ou complete selon l'etat de l'existant et vos objectifs de conversion.",
+      "Oui, je peux effectuer une refonte partielle ou complète selon l'état de l'existant et vos objectifs de conversion.",
   },
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Creation de site internet sur mesure en Bretagne",
+  title: "Création de site internet sur mesure en Bretagne",
   description:
-    "Creation de site internet sur mesure en Bretagne et Centre Bretagne. Site rapide, bien structure et optimise pour la conversion.",
+    "Création de site internet sur mesure en Bretagne et Centre Bretagne. Site rapide, bien structuré et optimisé pour la conversion.",
   path,
   keywords: [
     "site internet sur mesure bretagne",
-    "creation site internet centre bretagne",
-    "developpeur site web freelance",
+    "création site internet centre bretagne",
+    "développeur site web freelance",
     "refonte site internet",
     "site vitrine bretagne",
   ],
@@ -60,36 +60,36 @@ export default function CreationSiteInternetSurMesurePage() {
           faqSchemaFromItems(faqItems),
           breadcrumbSchema([
             { name: "Accueil", path: "/" },
-            { name: "Creation site internet sur mesure", path },
+            { name: "Création site internet sur mesure", path },
           ]),
         ]}
       />
       <Navbar />
       <SeoServicePage
         eyebrow="Site internet sur mesure"
-        h1="Creation de site internet sur mesure en Bretagne"
-        intro="Je concois des sites internet alignes sur vos objectifs commerciaux: acquisition, clarte de l'offre, preuve de confiance et conversion."
+        h1="Création de site internet sur mesure en Bretagne"
+        intro="Je conçois des sites internet alignés sur vos objectifs commerciaux: acquisition, clarté de l'offre, preuve de confiance et conversion."
         primaryKeyword="site internet sur mesure bretagne"
         secondaryKeywords={[
-          "creation site internet centre bretagne",
-          "developpeur web freelance",
+          "création site internet centre bretagne",
+          "développeur web freelance",
           "refonte de site",
           "site vitrine performant",
         ]}
         offers={[
-          "Creation de site vitrine sur mesure",
+          "Création de site vitrine sur mesure",
           "Refonte de site internet existant",
-          "Structure de contenu orientee SEO et conversion",
+          "Structure de contenu orientée SEO et conversion",
           "Optimisations techniques de performance",
         ]}
         localValuePoints={[
           "Accompagnement proche des besoins terrain",
-          "Decision rapide avec interlocuteur unique",
-          "Capacite a adapter le projet a votre maturite digitale",
-          "Suivi apres mise en ligne pour consolider les resultats",
+          "Décision rapide avec interlocuteur unique",
+          "Capacité à adapter le projet à votre maturité digitale",
+          "Suivi après mise en ligne pour consolider les résultats",
         ]}
         faqItems={faqItems}
-        ctaLabel="Vous voulez un site internet qui genere des opportunites ?"
+        ctaLabel="Vous voulez un site internet qui génère des opportunités ?"
       />
       <Footer />
     </div>

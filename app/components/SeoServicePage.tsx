@@ -56,7 +56,7 @@ const SeoServicePage = ({
       <section className="py-16 px-4 bg-slate-800/60 border-y border-slate-800">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
           <article className="bg-slate-900/70 border border-slate-700 rounded-2xl p-6">
-            <h2 className="text-2xl font-semibold mb-4">Ce que je peux realiser</h2>
+            <h2 className="text-2xl font-semibold mb-4">Ce que je peux réaliser</h2>
             <ul className="space-y-3 text-slate-300">
               {offers.map((item) => (
                 <li key={item} className="flex items-start gap-2">
@@ -83,7 +83,7 @@ const SeoServicePage = ({
 
       <section className="py-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Questions frequentes</h2>
+          <h2 className="text-3xl font-bold mb-8">Questions fréquentes</h2>
           <div className="space-y-4">
             {faqItems.map((item) => (
               <details
@@ -105,8 +105,8 @@ const SeoServicePage = ({
           <div className="mt-12 bg-slate-800/70 border border-slate-700 rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-3">{ctaLabel}</h2>
             <p className="text-slate-300 mb-6 leading-relaxed">
-              Je peux vous accompagner en Centre Bretagne ou a distance pour livrer
-              un resultat utile rapidement.
+              Je peux vous accompagner en Centre Bretagne ou à distance pour livrer
+              un résultat utile rapidement.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -119,14 +119,14 @@ const SeoServicePage = ({
                 href="/"
                 className="px-6 py-3 rounded-full border border-slate-500 text-slate-200 hover:border-slate-300 transition-colors"
               >
-                Retour a la page d&apos;accueil
+                Retour à la page d&apos;accueil
               </Link>
             </div>
           </div>
 
           <div className="mt-8 text-sm text-slate-400 flex flex-wrap gap-4">
             <Link href="/developpeur-freelance-bretagne" className="hover:text-slate-200">
-              Developpeur freelance Bretagne
+              Développeur freelance Bretagne
             </Link>
             <Link
               href="/creation-site-internet-sur-mesure-bretagne"

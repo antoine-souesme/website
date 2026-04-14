@@ -30,7 +30,7 @@ const Hero = () => {
           }`}
         >
           <p className="text-sm uppercase tracking-[0.2em] text-sky-200 mb-4">
-            Developpeur freelance en Centre Bretagne
+            Développeur freelance en Centre Bretagne
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
@@ -38,12 +38,12 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-2xl text-slate-200 mb-4 max-w-3xl mx-auto leading-relaxed">
-            J&apos;aide les entreprises a concevoir, developper et faire evoluer des
+            J&apos;aide les entreprises à concevoir, développer et faire évoluer des
             solutions digitales utiles, performantes et maintenables.
           </p>
 
           <p className="text-slate-300 mb-8">
-            10 ans d&apos;experience, premier retour sous 24h, accompagnement
+            10 ans d&apos;expérience, premier retour sous 24h, accompagnement
             freelance de bout en bout.
           </p>
 
@@ -52,19 +52,19 @@ const Hero = () => {
               href="/creation-site-internet-sur-mesure-bretagne"
               className="px-4 py-2 bg-blue-500/20 text-blue-200 rounded-full border border-blue-400/40 hover:bg-blue-500/30 transition-all duration-300"
             >
-              Creation de site internet
+              Création de site internet
             </Link>
             <Link
               href="/developpement-logiciel-sur-mesure-bretagne"
               className="px-4 py-2 bg-emerald-500/20 text-emerald-200 rounded-full border border-emerald-400/40 hover:bg-emerald-500/30 transition-all duration-300"
             >
-              Developpement logiciel sur mesure
+              Développement logiciel sur mesure
             </Link>
             <Link
               href="/developpeur-freelance-bretagne"
               className="px-4 py-2 bg-indigo-500/20 text-indigo-200 rounded-full border border-indigo-400/40 hover:bg-indigo-500/30 transition-all duration-300"
             >
-              Developpeur freelance Bretagne
+              Développeur freelance Bretagne
             </Link>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Hero = () => {
             href="#contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105"
           >
-            Demarrer mon projet
+            Démarrer mon projet
           </a>
         </div>
       </div>

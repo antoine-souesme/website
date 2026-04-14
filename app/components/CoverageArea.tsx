@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const cities = ["Pontivy", "Loudeac", "Carhaix", "Rostrenen"];
+const cities = ["Pontivy", "Loudéac", "Carhaix", "Rostrenen"];
 
 const CoverageArea = () => {
   return (
@@ -10,8 +10,8 @@ const CoverageArea = () => {
           Zone d&apos;intervention: Centre Bretagne
         </h2>
         <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-          J&apos;accompagne les entreprises en Centre Bretagne pour creer des sites
-          internet et logiciels sur mesure, avec un suivi proche et une execution
+          J&apos;accompagne les entreprises en Centre Bretagne pour créer des sites
+          internet et logiciels sur mesure, avec un suivi proche et une exécution
           rapide.
         </p>
 
@@ -31,11 +31,11 @@ const CoverageArea = () => {
 
           <div className="bg-slate-900/60 border border-slate-700 rounded-2xl p-6">
             <h3 className="text-2xl font-semibold text-white mb-4">
-              Bretagne et missions a distance
+              Bretagne et missions à distance
             </h3>
             <p className="text-slate-300 leading-relaxed mb-4">
               Je peux aussi intervenir partout en Bretagne pour vos besoins en
-              creation de site internet, logiciel metier et refonte technique.
+              création de site internet, logiciel métier et refonte technique.
             </p>
             <Link
               href="/developpeur-freelance-bretagne"

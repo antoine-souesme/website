@@ -11,19 +11,19 @@ export const siteUrl = normalizeSiteUrl(rawSiteUrl);
 export const siteName = "Antoine Souesme";
 
 export const seoKeywords = [
-  "developpeur freelance",
-  "developpeur bretagne",
-  "developpeur centre bretagne",
+  "développeur freelance",
+  "développeur bretagne",
+  "développeur centre bretagne",
   "site internet sur mesure",
-  "creation site internet bretagne",
-  "developpement logiciel sur mesure",
+  "création site internet bretagne",
+  "développement logiciel sur mesure",
   "freelance bretagne",
   "freelance centre bretagne",
-  "logiciel metier",
+  "logiciel métier",
   "application web sur mesure",
 ];
 
-export const localCities = ["Pontivy", "Loudeac", "Carhaix", "Rostrenen"];
+export const localCities = ["Pontivy", "Loudéac", "Carhaix", "Rostrenen"];
 
 export type PageSeoConfig = {
   title: string;
@@ -70,7 +70,7 @@ export const personSchema = {
   "@type": "Person",
   name: "Antoine Souesme",
   url: absoluteUrl("/"),
-  jobTitle: "Developpeur freelance",
+  jobTitle: "Développeur freelance",
   worksFor: {
     "@type": "Organization",
     name: "Antoine Souesme",
@@ -90,20 +90,20 @@ export const professionalServiceSchema = {
   url: absoluteUrl("/"),
   areaServed: ["Centre Bretagne", "Bretagne", ...localCities],
   serviceType: [
-    "Developpement de site internet sur mesure",
-    "Developpement de logiciel sur mesure",
-    "Developpement web freelance",
+    "Développement de site internet sur mesure",
+    "Développement de logiciel sur mesure",
+    "Développement web freelance",
   ],
   description:
-    "Developpeur freelance en Centre Bretagne. Creation de sites internet et logiciels sur mesure pour entreprises.",
+    "Développeur freelance en Centre Bretagne. Création de sites internet et logiciels sur mesure pour entreprises.",
   founder: {
     "@type": "Person",
     name: "Antoine Souesme",
   },
   knowsAbout: [
-    "Developpement web",
+    "Développement web",
     "Site internet",
-    "Logiciel metier",
+    "Logiciel métier",
     "React",
     "TypeScript",
     "Node.js",
@@ -112,24 +112,24 @@ export const professionalServiceSchema = {
 
 export const homeFaqItems = [
   {
-    question: "Pourquoi choisir un developpeur freelance en Centre Bretagne ?",
+    question: "Pourquoi choisir un développeur freelance en Centre Bretagne ?",
     answer:
-      "Vous gagnez en proximite, en reactivite et en accompagnement sur mesure pour votre projet digital.",
+      "Vous gagnez en proximité, en réactivité et en accompagnement sur mesure pour votre projet digital.",
   },
   {
-    question: "Combien de temps pour creer un site internet sur mesure ?",
+    question: "Combien de temps pour créer un site internet sur mesure ?",
     answer:
-      "Selon la complexite, un site vitrine peut etre livre en quelques semaines, avec un cadrage clair des delais des le depart.",
+      "Selon la complexité, un site vitrine peut être livré en quelques semaines, avec un cadrage clair des délais dès le départ.",
   },
   {
-    question: "Pouvez-vous developper un logiciel metier sur mesure ?",
+    question: "Pouvez-vous développer un logiciel métier sur mesure ?",
     answer:
-      "Oui, je concois des applications adaptees a vos processus internes, avec une architecture evolutive.",
+      "Oui, je conçois des applications adaptées à vos processus internes, avec une architecture évolutive.",
   },
   {
     question: "Intervenez-vous uniquement en Centre Bretagne ?",
     answer:
-      "Le coeur de l'activite est en Centre Bretagne, avec interventions possibles partout en Bretagne et a distance.",
+      "Le cœur de l'activité est en Centre Bretagne, avec interventions possibles partout en Bretagne et à distance.",
   },
   {
     question: "Travaillez-vous avec des TPE, PME et associations ?",
@@ -139,12 +139,12 @@ export const homeFaqItems = [
   {
     question: "Comment se passe un projet sur mesure ?",
     answer:
-      "Le projet suit une methode simple: brief, conception, developpement, livraison et accompagnement.",
+      "Le projet suit une méthode simple: brief, conception, développement, livraison et accompagnement.",
   },
   {
-    question: "Quel delai de reponse pour une demande ?",
+    question: "Quel délai de réponse pour une demande ?",
     answer:
-      "Je m'engage a un premier retour sous 24h ouvrees pour cadrer votre besoin et proposer la suite.",
+      "Je m'engage à un premier retour sous 24h ouvrées pour cadrer votre besoin et proposer la suite.",
   },
 ];
 

@@ -3,12 +3,12 @@ import Link from "next/link";
 const Services = () => {
   const services = [
     {
-      title: "Creation de site internet sur mesure",
+      title: "Création de site internet sur mesure",
       description:
-        "Sites vitrines et plateformes web performantes, concues pour convertir et evoluer.",
+        "Sites vitrines et plateformes web performantes, conçues pour convertir et évoluer.",
       features: [
         "Conception UX",
-        "Developpement front-end et back-end",
+        "Développement front-end et back-end",
         "SEO technique",
         "Mise en production",
       ],
@@ -16,13 +16,13 @@ const Services = () => {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Developpement logiciel sur mesure",
+      title: "Développement logiciel sur mesure",
       description:
-        "Applications metier adaptees a vos processus pour gagner en productivite et fiabilite.",
+        "Applications métier adaptées à vos processus pour gagner en productivité et fiabilité.",
       features: [
-        "Analyse besoin metier",
-        "Architecture evolutive",
-        "API et base de donnees",
+        "Analyse besoin métier",
+        "Architecture évolutive",
+        "API et base de données",
         "Maintenance continue",
       ],
       href: "/developpement-logiciel-sur-mesure-bretagne",
@@ -31,11 +31,11 @@ const Services = () => {
     {
       title: "Accompagnement freelance en Bretagne",
       description:
-        "Renfort technique pour accelerer votre roadmap, de la conception a la livraison.",
+        "Renfort technique pour accélérer votre roadmap, de la conception à la livraison.",
       features: [
         "Intervention en Centre Bretagne",
-        "Collaboration avec vos equipes",
-        "Code review et qualite",
+        "Collaboration avec vos équipes",
+        "Code review et qualité",
         "Pilotage pragmatique",
       ],
       href: "/developpeur-freelance-bretagne",
@@ -75,7 +75,7 @@ const Services = () => {
                 href={service.href}
                 className="inline-flex text-sm font-semibold text-blue-300 hover:text-blue-200 transition-colors"
               >
-                Voir la page detaillee
+                Voir la page détaillée
               </Link>
             </article>
           ))}
@@ -83,17 +83,17 @@ const Services = () => {
 
         <div className="mt-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 backdrop-blur-sm p-10 rounded-3xl border border-slate-700/50 text-center max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-5">
-            Besoin d&apos;un developpeur freelance en Centre Bretagne ?
+            Besoin d&apos;un développeur freelance en Centre Bretagne ?
           </h3>
           <p className="text-slate-300 text-lg mb-8 leading-relaxed">
             Discutons de votre contexte et construisons une solution sur mesure,
-            utile pour votre activite et soutenable dans la duree.
+            utile pour votre activité et soutenable dans la durée.
           </p>
           <a
             href="#contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
           >
-            Demander un echange
+            Demander un échange
           </a>
         </div>
       </div>

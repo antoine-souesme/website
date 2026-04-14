@@ -22,9 +22,9 @@ import {
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Developpeur freelance Centre Bretagne - Site internet et logiciel sur mesure",
+    "Développeur freelance Centre Bretagne - Site internet et logiciel sur mesure",
   description:
-    "Developpeur freelance en Centre Bretagne pour la creation de site internet et le developpement de logiciel sur mesure.",
+    "Développeur freelance en Centre Bretagne pour la création de site internet et le développement de logiciel sur mesure.",
   path: "/",
   keywords: seoKeywords,
 });

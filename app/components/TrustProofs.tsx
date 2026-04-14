@@ -1,22 +1,22 @@
 const trustItems = [
   {
-    label: "Experience",
+    label: "Expérience",
     value: "10 ans",
-    description: "Developpement web et logiciel pour des projets de tailles variees.",
+    description: "Développement web et logiciel pour des projets de tailles variées.",
   },
   {
     label: "Types de projets",
     value: "Site + logiciel",
     description:
-      "Sites vitrines, plateformes web, outils metier et evolutions techniques.",
+      "Sites vitrines, plateformes web, outils métier et évolutions techniques.",
   },
   {
-    label: "Delai de reponse",
+    label: "Délai de réponse",
     value: "24h",
-    description: "Premier retour rapide pour cadrer le besoin et la prochaine etape.",
+    description: "Premier retour rapide pour cadrer le besoin et la prochaine étape.",
   },
   {
-    label: "Disponibilite",
+    label: "Disponibilité",
     value: "Freelance actif",
     description:
       "Accompagnement ponctuel ou long terme selon votre charge et votre roadmap.",
@@ -31,7 +31,7 @@ const TrustProofs = () => {
           Preuves de confiance
         </h2>
         <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-          Des indicateurs clairs pour choisir un developpeur freelance adapte a
+          Des indicateurs clairs pour choisir un développeur freelance adapté à
           vos enjeux.
         </p>
 

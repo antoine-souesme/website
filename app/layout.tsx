@@ -4,9 +4,9 @@ import { buildPageMetadata, seoKeywords, siteUrl } from "./lib/seo";
 
 const defaultMetadata = buildPageMetadata({
   title:
-    "Developpeur freelance en Centre Bretagne | Site internet et logiciel sur mesure",
+    "Développeur freelance en Centre Bretagne | Site internet et logiciel sur mesure",
   description:
-    "Developpeur freelance en Centre Bretagne. Creation de site internet et developpement logiciel sur mesure pour entreprises en Bretagne.",
+    "Développeur freelance en Centre Bretagne. Création de site internet et développement logiciel sur mesure pour entreprises en Bretagne.",
   path: "/",
   keywords: seoKeywords,
 });
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Developpeur freelance en Centre Bretagne | Site internet et logiciel sur mesure",
+      "Développeur freelance en Centre Bretagne | Site internet et logiciel sur mesure",
     template: "%s | Antoine Souesme",
   },
   description: defaultMetadata.description,

@@ -17,36 +17,36 @@ const faqItems = [
   {
     question: "Qu'est-ce qu'un logiciel sur mesure ?",
     answer:
-      "Un logiciel sur mesure est une application construite selon vos processus metier, vos contraintes et vos objectifs de performance.",
+      "Un logiciel sur mesure est une application construite selon vos processus métier, vos contraintes et vos objectifs de performance.",
   },
   {
-    question: "Pouvez-vous remplacer un fichier Excel ou un outil limite ?",
+    question: "Pouvez-vous remplacer un fichier Excel ou un outil limité ?",
     answer:
-      "Oui, je peux transformer un fonctionnement manuel en solution web plus fiable, partagee et evolutive.",
+      "Oui, je peux transformer un fonctionnement manuel en solution web plus fiable, partagée et évolutive.",
   },
   {
-    question: "Le logiciel peut-il evoluer dans le temps ?",
+    question: "Le logiciel peut-il évoluer dans le temps ?",
     answer:
-      "Oui, l'architecture est prevue pour ajouter des modules et accompagner la croissance de votre activite.",
+      "Oui, l'architecture est prévue pour ajouter des modules et accompagner la croissance de votre activité.",
   },
   {
     question: "Travaillez-vous avec les PME en Bretagne ?",
     answer:
-      "Oui, j'accompagne des entreprises en Bretagne et Centre Bretagne sur des besoins logiciels metier concretement utiles.",
+      "Oui, j'accompagne des entreprises en Bretagne et Centre Bretagne sur des besoins logiciels métier concrètement utiles.",
   },
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Developpement de logiciel sur mesure en Bretagne",
+  title: "Développement de logiciel sur mesure en Bretagne",
   description:
-    "Developpement de logiciel sur mesure en Bretagne et Centre Bretagne. Applications metier robustes, evolutives et adaptees a vos processus.",
+    "Développement de logiciel sur mesure en Bretagne et Centre Bretagne. Applications métier robustes, évolutives et adaptées à vos processus.",
   path,
   keywords: [
     "logiciel sur mesure bretagne",
-    "developpement logiciel centre bretagne",
-    "application metier sur mesure",
-    "developpeur logiciel freelance",
-    "outil metier web",
+    "développement logiciel centre bretagne",
+    "application métier sur mesure",
+    "développeur logiciel freelance",
+    "outil métier web",
   ],
 });
 
@@ -60,36 +60,36 @@ export default function DeveloppementLogicielSurMesurePage() {
           faqSchemaFromItems(faqItems),
           breadcrumbSchema([
             { name: "Accueil", path: "/" },
-            { name: "Developpement logiciel sur mesure", path },
+            { name: "Développement logiciel sur mesure", path },
           ]),
         ]}
       />
       <Navbar />
       <SeoServicePage
-        eyebrow="Logiciel metier"
-        h1="Developpement de logiciel sur mesure en Bretagne"
-        intro="Je developpe des logiciels metier qui simplifient vos operations quotidiennes et rendent vos donnees plus exploitables pour piloter l'activite."
+        eyebrow="Logiciel métier"
+        h1="Développement de logiciel sur mesure en Bretagne"
+        intro="Je développe des logiciels métier qui simplifient vos opérations quotidiennes et rendent vos données plus exploitables pour piloter l'activité."
         primaryKeyword="logiciel sur mesure bretagne"
         secondaryKeywords={[
-          "developpement logiciel centre bretagne",
-          "application metier",
+          "développement logiciel centre bretagne",
+          "application métier",
           "outil sur mesure",
-          "developpeur logiciel freelance",
+          "développeur logiciel freelance",
         ]}
         offers={[
-          "Conception d'applications metier web",
-          "Automatisation de process repetitifs",
-          "Centralisation et visualisation de donnees",
-          "Maintenance et evolutions progressives",
+          "Conception d'applications métier web",
+          "Automatisation de process répétitifs",
+          "Centralisation et visualisation de données",
+          "Maintenance et évolutions progressives",
         ]}
         localValuePoints={[
-          "Approche terrain adaptee aux besoins des PME",
+          "Approche terrain adaptée aux besoins des PME",
           "Communication directe pour arbitrer rapidement",
-          "Livraison incrementale pour obtenir de la valeur vite",
-          "Support fiable apres la mise en service",
+          "Livraison incrémentale pour obtenir de la valeur vite",
+          "Support fiable après la mise en service",
         ]}
         faqItems={faqItems}
-        ctaLabel="Besoin d'un logiciel metier adapte a votre activite ?"
+        ctaLabel="Besoin d'un logiciel métier adapté à votre activité ?"
       />
       <Footer />
     </div>

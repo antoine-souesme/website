@@ -9,7 +9,7 @@ const Faq = () => {
           FAQ
         </h2>
         <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-          Reponses aux questions les plus frequentes pour un projet web ou
+          Réponses aux questions les plus fréquentes pour un projet web ou
           logiciel en Centre Bretagne.
         </p>
 

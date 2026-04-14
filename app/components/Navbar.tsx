@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   const sectionNav = [
-    { label: "A propos", href: "/#about" },
+    { label: "À propos", href: "/#about" },
     { label: "Services", href: "/#services" },
     { label: "FAQ", href: "/#faq" },
   ];
