@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 type FaqItem = {
   question: string;
@@ -111,7 +111,7 @@ const SeoServicePage = ({
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/#contact"
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full font-semibold hover:scale-105 transition-transform"
+                className="px-6 py-3 bg-linear-to-r from-blue-500 to-indigo-500 rounded-full font-semibold hover:scale-105 transition-transform"
               >
                 Me contacter
               </Link>

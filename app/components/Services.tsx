@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 px-4 bg-slate-900">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl font-bold mb-4 text-center text-white">Services</h2>
+        <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</h2>
         <p className="text-xl text-slate-400 text-center mb-16">
           Des offres claires pour vos besoins web et logiciel sur mesure en Bretagne
         </p>
@@ -58,7 +58,7 @@ const Services = () => {
               className="group bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700/50 hover:border-slate-600 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
             >
               <h3
-                className={`text-2xl font-bold mb-3 bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}
+                className={`text-2xl font-bold mb-3 bg-linear-to-r ${service.color} bg-clip-text text-transparent`}
               >
                 {service.title}
               </h3>
@@ -81,7 +81,7 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 backdrop-blur-sm p-10 rounded-3xl border border-slate-700/50 text-center max-w-4xl mx-auto">
+        <div className="mt-20 bg-linear-to-r from-blue-500/10 via-cyan-500/10 to-indigo-500/10 backdrop-blur-sm p-10 rounded-3xl border border-slate-700/50 text-center max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold text-white mb-5">
             Besoin d&apos;un développeur freelance en Centre Bretagne ?
           </h3>
@@ -91,7 +91,7 @@ const Services = () => {
           </p>
           <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+            className="inline-block px-8 py-4 bg-linear-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
           >
             Demander un échange
           </a>

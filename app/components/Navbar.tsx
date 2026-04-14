@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4 lg:gap-7">
             <Link
               href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform"
+              className="text-2xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
               AS
             </Link>
@@ -87,7 +87,7 @@ const Navbar = () => {
 
           <Link
             href="/#contact"
-            className="px-5 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 text-sm font-semibold"
+            className="px-5 py-2 bg-linear-to-r from-blue-500 to-purple-500 text-white rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 text-sm font-semibold"
           >
             Me contacter
           </Link>

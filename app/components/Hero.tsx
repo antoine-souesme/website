@@ -76,7 +76,7 @@ const Hero = () => {
         >
           <a
             href="#contact"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105"
+            className="inline-block px-8 py-4 bg-linear-to-b from-sky-500 to-sky-900 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105"
           >
             Démarrer mon projet
           </a>

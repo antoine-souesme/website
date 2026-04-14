@@ -5,7 +5,7 @@ const Faq = () => {
   return (
     <section id="faq" className="py-20 px-4 bg-slate-800">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center text-white">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
           FAQ
         </h2>
         <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
