@@ -19,8 +19,8 @@ const Hero = () => {
     return (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="hero-animated-bg absolute inset-0" />
-                <div className="hero-animated-overlay absolute inset-0" />
+                <div className="hero-underwater-bg absolute inset-0" />
+                <div className="hero-water-surface absolute inset-0" />
             </div>
 
             <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">

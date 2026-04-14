@@ -1,125 +1,159 @@
 @import "tailwindcss";
 
 @theme {
-  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-@keyframes hero-gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes underwater-current {
+    0% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
 }
 
-@keyframes hero-aurora-drift {
-  0% {
-    transform: translate3d(-12%, -8%, 0) scale(1.1);
-  }
-  50% {
-    transform: translate3d(10%, 12%, 0) scale(1.25);
-  }
-  100% {
-    transform: translate3d(-12%, -8%, 0) scale(1.1);
-  }
+@keyframes surface-wave {
+    0% {
+        background-position: 0% 0%, 50% 0%;
+    }
+
+    50% {
+        background-position: 100% 0%, 50% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%, 50% 0%;
+    }
 }
 
-@keyframes hero-aurora-spin {
-  0% {
-    transform: rotate(0deg) scale(1.05);
-  }
-  100% {
-    transform: rotate(360deg) scale(1.05);
-  }
+@keyframes rays-sway {
+    0% {
+        opacity: 0.66;
+        transform: translate3d(0, -2%, 0) scale(1.08) rotate(-2deg);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translate3d(0, 1.5%, 0) scale(1.16) rotate(2deg);
+    }
+
+    100% {
+        opacity: 0.66;
+        transform: translate3d(0, -2%, 0) scale(1.08) rotate(-2deg);
+    }
 }
 
-.hero-animated-bg {
-  position: relative;
-  overflow: hidden;
-  background-color: #020617;
-  background-image: linear-gradient(
-    120deg,
-    #020617 0%,
-    #0f172a 30%,
-    #0c4a6e 55%,
-    #0f766e 78%,
-    #020617 100%
-  );
-  background-size: 220% 220%;
-  animation: hero-gradient-shift 10s ease-in-out infinite;
-  will-change: background-position;
+@keyframes sun-glow {
+    0% {
+        opacity: 0.72;
+        transform: translate3d(0, -3%, 0) scale(0.97);
+    }
+
+    50% {
+        opacity: 0.95;
+        transform: translate3d(0, 0, 0) scale(1.04);
+    }
+
+    100% {
+        opacity: 0.72;
+        transform: translate3d(0, -3%, 0) scale(0.97);
+    }
 }
 
-.hero-animated-bg::before {
-  content: "";
-  position: absolute;
-  inset: -35%;
-  background:
-    radial-gradient(circle at 20% 30%, rgb(56 189 248 / 0.4), transparent 38%),
-    radial-gradient(circle at 70% 20%, rgb(20 184 166 / 0.3), transparent 36%),
-    radial-gradient(circle at 55% 80%, rgb(14 116 144 / 0.35), transparent 44%);
-  filter: blur(26px);
-  animation: hero-aurora-drift 16s ease-in-out infinite;
-  will-change: transform;
+@keyframes particles-drift {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.34;
+    }
+
+    50% {
+        transform: translate3d(0, -2.5%, 0);
+        opacity: 0.52;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0.34;
+    }
 }
 
-.hero-animated-bg::after {
-  content: "";
-  position: absolute;
-  inset: -25%;
-  background:
-    conic-gradient(
-      from 140deg at 50% 50%,
-      rgb(14 165 233 / 0.16) 0deg,
-      rgb(45 212 191 / 0.12) 120deg,
-      rgb(56 189 248 / 0.18) 240deg,
-      rgb(14 165 233 / 0.16) 360deg
-    );
-  filter: blur(34px);
-  mix-blend-mode: screen;
-  animation: hero-aurora-spin 28s linear infinite;
-  will-change: transform;
+.hero-underwater-bg {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% -8%, rgb(167 243 255 / 0.22), transparent 38%),
+        linear-gradient(180deg,
+            #0b557b 0%,
+            #0a3e65 20%,
+            #072e4d 42%,
+            #041f38 62%,
+            #031227 100%);
+    background-size: 130% 130%, 100% 100%;
+    animation: underwater-current 14s ease-in-out infinite;
 }
 
-.hero-animated-overlay {
-  background:
-    radial-gradient(120% 90% at 50% -12%, rgb(148 163 184 / 0.12), transparent 45%),
-    radial-gradient(85% 70% at 50% 120%, rgb(2 6 23 / 0.58), rgb(2 6 23 / 0.72));
+.hero-underwater-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 22% 58%, rgb(56 189 248 / 0.14), transparent 46%),
+        radial-gradient(circle at 78% 38%, rgb(45 212 191 / 0.11), transparent 44%);
+    mix-blend-mode: screen;
+}
+
+.hero-water-surface {
+    background:
+        radial-gradient(70% 48% at 50% 0%, rgb(219 248 255 / 0.58), transparent 70%),
+        repeating-linear-gradient(95deg,
+            transparent 0%,
+            transparent 8%,
+            rgb(210 245 255 / 0.11) 12%,
+            transparent 16%);
+    background-size: 100% 100%, 180% 100%;
+    background-position: 50% 0%, 0% 0%;
+    opacity: 0.72;
+    animation: surface-wave 12s linear infinite;
+    mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 0.72) 34%, transparent 70%);
 }
 
 .animate-gradient {
-  background-size: 200% auto;
-  animation: gradient 3s linear infinite;
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-animated-bg,
-  .hero-animated-bg::before,
-  .hero-animated-bg::after,
-  .animate-gradient {
-    animation: none;
-  }
+
+    .hero-underwater-bg,
+    .hero-water-surface,
+    .animate-gradient {
+        animation: none;
+    }
 }
 
 html {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  scroll-behavior: smooth;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
 }
