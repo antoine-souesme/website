@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import { homeFaqItems } from "../lib/seo";
 
 const Faq = () => {
@@ -20,9 +21,10 @@ const Faq = () => {
             >
               <summary className="cursor-pointer text-white font-semibold list-none pr-6 relative">
                 {item.question}
-                <span className="absolute right-0 top-0 text-slate-400 group-open:rotate-45 transition-transform">
-                  +
-                </span>
+                <ChevronDown
+                  size={18}
+                  className="absolute right-0 top-0.5 text-slate-400 transition-transform group-open:rotate-180"
+                />
               </summary>
               <p className="mt-3 text-slate-300 leading-relaxed">{item.answer}</p>
             </details>
