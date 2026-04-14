@@ -2,23 +2,75 @@
 
 import { useState } from 'react';
 
+type ContactFormData = {
+    name: string;
+    email: string;
+    message: string;
+};
+
+type FormFeedback = {
+    type: 'success' | 'error';
+    message: string;
+};
+
 const Contact = () => {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<ContactFormData>({
         name: '',
         email: '',
         message: '',
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [feedback, setFeedback] = useState<FormFeedback | null>(null);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.info('Form submitted:', formData);
+        setIsSubmitting(true);
+        setFeedback(null);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const payload = (await response.json().catch(() => null)) as { error?: string } | null;
+
+            if (!response.ok) {
+                throw new Error(payload?.error ?? "Une erreur est survenue lors de l'envoi.");
+            }
+
+            setFeedback({
+                type: 'success',
+                message: 'Message envoyé. Je reviens vers vous rapidement.',
+            });
+            setFormData({
+                name: '',
+                email: '',
+                message: '',
+            });
+        } catch (error) {
+            const message =
+                error instanceof Error ? error.message : "Impossible d'envoyer le message.";
+
+            setFeedback({
+                type: 'error',
+                message,
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
+        const key = e.target.name as keyof ContactFormData;
+
+        setFormData((previous) => ({
+            ...previous,
+            [key]: e.target.value,
+        }));
     };
 
     const contactInfo = [
@@ -116,10 +168,16 @@ const Contact = () => {
                             </div>
                             <button
                                 type="submit"
+                                disabled={ isSubmitting }
                                 className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
                             >
-                                Envoyer le message
+                                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                             </button>
+                            {feedback && (
+                                <p className={ `text-sm ${feedback.type === 'success' ? 'text-emerald-400' : 'text-red-400'}` }>
+                                    {feedback.message}
+                                </p>
+                            )}
                         </form>
                     </div>
 
