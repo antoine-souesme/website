@@ -5,22 +5,6 @@
     "Helvetica Neue", Arial, sans-serif;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  25% {
-    transform: translateY(-20px) translateX(10px);
-  }
-  50% {
-    transform: translateY(-10px) translateX(-10px);
-  }
-  75% {
-    transform: translateY(-30px) translateX(5px);
-  }
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -33,13 +17,105 @@
   }
 }
 
-.animate-float {
-  animation: float linear infinite;
+@keyframes hero-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes hero-aurora-drift {
+  0% {
+    transform: translate3d(-12%, -8%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(10%, 12%, 0) scale(1.25);
+  }
+  100% {
+    transform: translate3d(-12%, -8%, 0) scale(1.1);
+  }
+}
+
+@keyframes hero-aurora-spin {
+  0% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+.hero-animated-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #020617;
+  background-image: linear-gradient(
+    120deg,
+    #020617 0%,
+    #0f172a 30%,
+    #0c4a6e 55%,
+    #0f766e 78%,
+    #020617 100%
+  );
+  background-size: 220% 220%;
+  animation: hero-gradient-shift 10s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.hero-animated-bg::before {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  background:
+    radial-gradient(circle at 20% 30%, rgb(56 189 248 / 0.4), transparent 38%),
+    radial-gradient(circle at 70% 20%, rgb(20 184 166 / 0.3), transparent 36%),
+    radial-gradient(circle at 55% 80%, rgb(14 116 144 / 0.35), transparent 44%);
+  filter: blur(26px);
+  animation: hero-aurora-drift 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-animated-bg::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background:
+    conic-gradient(
+      from 140deg at 50% 50%,
+      rgb(14 165 233 / 0.16) 0deg,
+      rgb(45 212 191 / 0.12) 120deg,
+      rgb(56 189 248 / 0.18) 240deg,
+      rgb(14 165 233 / 0.16) 360deg
+    );
+  filter: blur(34px);
+  mix-blend-mode: screen;
+  animation: hero-aurora-spin 28s linear infinite;
+  will-change: transform;
+}
+
+.hero-animated-overlay {
+  background:
+    radial-gradient(120% 90% at 50% -12%, rgb(148 163 184 / 0.12), transparent 45%),
+    radial-gradient(85% 70% at 50% 120%, rgb(2 6 23 / 0.58), rgb(2 6 23 / 0.72));
 }
 
 .animate-gradient {
   background-size: 200% auto;
   animation: gradient 3s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animated-bg,
+  .hero-animated-bg::before,
+  .hero-animated-bg::after,
+  .animate-gradient {
+    animation: none;
+  }
 }
 
 html {
