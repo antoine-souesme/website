@@ -96,7 +96,7 @@ const Contact = () => {
             className="py-20 px-4 bg-slate-800"
         >
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Contact
                 </h2>
                 <p className="text-xl text-slate-400 text-center mb-16">
@@ -169,7 +169,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={ isSubmitting }
-                                className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+                                className="w-full px-8 py-4 bg-linear-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
                             >
                                 {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                             </button>
@@ -189,7 +189,7 @@ const Contact = () => {
                         <div className="flex flex-col gap-4">
 
 
-                            <div className=" bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20">
+                            <div className=" bg-linear-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20">
                                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                                     <span>🟢</span>
                                     <span>Disponibilité</span>
@@ -220,7 +220,7 @@ const Contact = () => {
                                                     <p className="text-slate-400 text-sm mb-1">
                                                         {info.label}
                                                     </p>
-                                                    <p className={ `font-semibold bg-gradient-to-r ${info.color} bg-clip-text text-transparent group-hover:underline` }>
+                                                    <p className={ `font-semibold bg-linear-to-r ${info.color} bg-clip-text text-transparent group-hover:underline` }>
                                                         {info.value}
                                                     </p>
                                                 </div>
@@ -243,7 +243,7 @@ const Contact = () => {
                                                     <p className="text-slate-400 text-sm mb-1">
                                                         {info.label}
                                                     </p>
-                                                    <p className={ `font-semibold bg-gradient-to-r ${info.color} bg-clip-text text-transparent` }>
+                                                    <p className={ `font-semibold bg-linear-to-r ${info.color} bg-clip-text text-transparent` }>
                                                         {info.value}
                                                     </p>
                                                 </div>

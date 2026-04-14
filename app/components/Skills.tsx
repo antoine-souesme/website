@@ -54,7 +54,7 @@ const Skills = () => {
             className="py-20 px-4 bg-slate-800"
         >
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                     Compétences
                 </h2>
                 <p className="text-xl text-slate-400 text-center mb-16">
@@ -72,7 +72,7 @@ const Skills = () => {
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="text-4xl">{skillGroup.icon}</div>
-                                <h3 className={ `text-xl font-semibold bg-gradient-to-r ${skillGroup.color} bg-clip-text text-transparent` }>
+                                <h3 className={ `text-xl font-semibold bg-linear-to-r ${skillGroup.color} bg-clip-text text-transparent` }>
                                     {skillGroup.category}
                                 </h3>
                             </div>
@@ -93,7 +93,7 @@ const Skills = () => {
                                         </div>
                                         {/* <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                                             <div
-                                                className={ `h-full bg-gradient-to-r ${skillGroup.color} rounded-full transition-all duration-1000 ease-out` }
+                                                className={ `h-full bg-linear-to-r ${skillGroup.color} rounded-full transition-all duration-1000 ease-out` }
                                                 style={ {
                                                     width: `${skill.level}%`,
                                                 } }
