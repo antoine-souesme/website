@@ -1,60 +1,64 @@
 const steps = [
-    {
-        title: "Brief",
-        description:
-            "Comprendre vos objectifs business, vos contraintes et vos priorités.",
-    },
-    {
-        title: "Conception",
-        description:
-            "Définir l'architecture, les parcours utilisateurs et le périmètre du MVP.",
-    },
-    {
-        title: "Développement",
-        description:
-            "Construire un site internet ou logiciel sur mesure, performant et maintenable.",
-    },
-    {
-        title: "Livraison",
-        description:
-            "Mise en production, vérification qualité et transfert des points clés.",
-    },
-    {
-        title: "Maintenance",
-        description:
-            "Suivi évolutif, optimisations et accompagnement dans la durée.",
-    },
+  {
+    title: "Brief",
+    description:
+      "Comprendre vos objectifs business, vos contraintes et vos priorités.",
+  },
+  {
+    title: "Conception",
+    description:
+      "Définir l'architecture, les parcours utilisateurs et le périmètre du MVP.",
+  },
+  {
+    title: "Développement",
+    description:
+      "Construire un site internet ou logiciel sur mesure, performant et maintenable.",
+  },
+  {
+    title: "Livraison",
+    description:
+      "Mise en production, vérification qualité et transfert des points clés.",
+  },
+  {
+    title: "Maintenance",
+    description:
+      "Suivi évolutif, optimisations et accompagnement dans la durée.",
+  },
 ];
 
 const CustomMethod = () => {
-    return (
-        <section id="methode-sur-mesure" className="py-20 px-4 bg-slate-900">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Méthode sur mesure
-                </h2>
-                <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-                    Un cadre clair pour livrer vite et bien, sans sacrifier la qualité
-                    technique ni la lisibilité du projet.
-                </p>
+  return (
+    <section id="methode" className="py-28 px-6 bg-ocean-900 text-sand-100">
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mb-16">
+          <p className="eyebrow text-sand-400 mb-4">Méthode sur mesure</p>
+          <h2 className="font-display text-5xl md:text-6xl serif-h2 mb-6">
+            Un cadre clair pour livrer{" "}
+            <span className="serif-em">vite et bien</span>.
+          </h2>
+          <p className="text-sand-100/80 text-lg leading-relaxed">
+            Sans sacrifier la qualité technique ni la lisibilité du projet.
+          </p>
+        </div>
 
-                <div className="grid md:grid-cols-5 gap-4">
-                    {steps.map((step, index) => (
-                        <article
-                            key={step.title}
-                            className="bg-slate-800/60 border border-slate-700 rounded-2xl p-5"
-                        >
-                            <p className="text-sm text-blue-300 mb-2">Étape {index + 1}</p>
-                            <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed">
-                                {step.description}
-                            </p>
-                        </article>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+        <ol className="grid md:grid-cols-5 gap-px bg-sand-100/15 border border-sand-100/15 rounded-2xl overflow-hidden">
+          {steps.map((step, index) => (
+            <li key={step.title} className="bg-ocean-900 p-6">
+              <div className="flex items-baseline justify-between mb-4">
+                <span className="font-display text-4xl text-sand-400">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="font-display text-2xl mb-2">{step.title}</h3>
+              <p className="text-sand-100/70 text-sm leading-relaxed">
+                {step.description}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
 };
 
 export default CustomMethod;

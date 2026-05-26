@@ -1,131 +1,71 @@
-/* eslint-disable react/no-unescaped-entities */
+const skillGroups = [
+  {
+    category: "Front-end",
+    items: ["React", "TypeScript", "Tailwind CSS", "JavaScript ES6+"],
+  },
+  {
+    category: "Mobile",
+    items: ["React Native", "iOS & Android", "Expo", "Mobile UX"],
+  },
+  {
+    category: "Back-end",
+    items: ["Node.js", "Express", "REST APIs", "PostgreSQL"],
+  },
+  {
+    category: "Outils & Méthodes",
+    items: ["Git", "CI/CD", "Agile/Scrum", "Testing"],
+  },
+];
+
+const stats = [
+  { value: "10+", label: "Années d'expérience" },
+  { value: "50+", label: "Projets réalisés" },
+  { value: "100%", label: "Clients satisfaits" },
+];
 
 const Skills = () => {
-    const skills = [
-        {
-            category: 'Front-end',
-            icon: '🎨',
-            color: 'from-blue-500 to-cyan-500',
-            items: [
-                { name: 'React', level: 95 },
-                { name: 'TypeScript', level: 90 },
-                { name: 'Tailwind CSS', level: 85 },
-                { name: 'JavaScript ES6+', level: 95 },
-            ],
-        },
-        {
-            category: 'Mobile',
-            icon: '📱',
-            color: 'from-purple-500 to-pink-500',
-            items: [
-                { name: 'React Native', level: 90 },
-                { name: 'iOS & Android', level: 85 },
-                { name: 'Expo', level: 80 },
-                { name: 'Mobile UX', level: 90 },
-            ],
-        },
-        {
-            category: 'Back-end',
-            icon: '⚙️',
-            color: 'from-green-500 to-emerald-500',
-            items: [
-                { name: 'Node.js', level: 90 },
-                { name: 'Express', level: 85 },
-                { name: 'REST APIs', level: 90 },
-                { name: 'PostgreSQL', level: 80 },
-            ],
-        },
-        {
-            category: 'Outils & Méthodes',
-            icon: '🛠️',
-            color: 'from-orange-500 to-red-500',
-            items: [
-                { name: 'Git', level: 90 },
-                { name: 'CI/CD', level: 80 },
-                { name: 'Agile/Scrum', level: 85 },
-                { name: 'Testing', level: 85 },
-            ],
-        },
-    ];
+  return (
+    <section
+      id="skills"
+      className="py-28 px-6 bg-sand-50 border-y border-ink-900/5"
+    >
+      <div className="max-w-6xl mx-auto">
+        <div className="max-w-2xl mb-14">
+          <p className="eyebrow mb-4">Compétences</p>
+          <h2 className="font-display text-5xl md:text-6xl serif-h2">
+            Une expertise <span className="serif-em">technique</span> complète.
+          </h2>
+        </div>
 
-    return (
-        <section
-            id="skills"
-            className="py-20 px-4 bg-slate-800"
-        >
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-5xl font-bold mb-4 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Compétences
-                </h2>
-                <p className="text-xl text-slate-400 text-center mb-16">
-                    Une expertise technique complète pour vos projets
-                </p>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {skills.map((skillGroup, index) => (
-                        <div
-                            key={ skillGroup.category }
-                            className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/5 hover:scale-105"
-                            style={ {
-                                animationDelay: `${index * 100}ms`,
-                            } }
-                        >
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="text-4xl">{skillGroup.icon}</div>
-                                <h3 className={ `text-xl font-semibold bg-linear-to-r ${skillGroup.color} bg-clip-text text-transparent` }>
-                                    {skillGroup.category}
-                                </h3>
-                            </div>
-
-                            <div className="space-y-4">
-                                {skillGroup.items.map((skill) => (
-                                    <div
-                                        key={ skill.name }
-                                        className="group"
-                                    >
-                                        <div className="flex justify-between items-center mb-2">
-                                            <span className="text-slate-300 text-sm group-hover:text-white transition-colors">
-                                                {skill.name}
-                                            </span>
-                                            {/* <span className="text-slate-500 text-xs">
-                                                {skill.level}%
-                                            </span> */}
-                                        </div>
-                                        {/* <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                            <div
-                                                className={ `h-full bg-linear-to-r ${skillGroup.color} rounded-full transition-all duration-1000 ease-out` }
-                                                style={ {
-                                                    width: `${skill.level}%`,
-                                                } }
-                                            />
-                                        </div> */}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="mt-16 grid md:grid-cols-3 gap-6">
-                    <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm p-6 rounded-2xl border border-blue-500/20 text-center">
-                        <div className="text-4xl mb-3">🏆</div>
-                        <div className="text-3xl font-bold text-white mb-2">10+</div>
-                        <div className="text-slate-400">Années d'expérience</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm p-6 rounded-2xl border border-green-500/20 text-center">
-                        <div className="text-4xl mb-3">🚀</div>
-                        <div className="text-3xl font-bold text-white mb-2">50+</div>
-                        <div className="text-slate-400">Projets réalisés</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm p-6 rounded-2xl border border-orange-500/20 text-center">
-                        <div className="text-4xl mb-3">😊</div>
-                        <div className="text-3xl font-bold text-white mb-2">100%</div>
-                        <div className="text-slate-400">Clients satisfaits</div>
-                    </div>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {skillGroups.map((group) => (
+            <div key={group.category}>
+              <p className="eyebrow text-sand-500 mb-5">{group.category}</p>
+              <ul className="space-y-3 font-display text-2xl">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="paper rounded-xl p-8 flex items-baseline gap-5"
+            >
+              <span className="font-display text-6xl text-sand-500 leading-none">
+                {stat.value}
+              </span>
+              <span className="text-ink-700">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Skills;

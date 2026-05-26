@@ -1,159 +1,275 @@
 @import "tailwindcss";
 
 @theme {
-    --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    --font-sans: var(--font-geist), system-ui, -apple-system, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, sans-serif;
+    --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+    --color-sand-50: #fbf8f1;
+    --color-sand-100: #f5ede0;
+    --color-sand-200: #ece0c8;
+    --color-sand-300: #dcc9a4;
+    --color-sand-400: #c8a45e;
+    --color-sand-500: #b48944;
+
+    --color-ink-300: #b3aea4;
+    --color-ink-400: #8c877f;
+    --color-ink-500: #6b6660;
+    --color-ink-700: #3a3631;
+    --color-ink-900: #1a1815;
+
+    --color-ocean-500: #1f7ba0;
+    --color-ocean-600: #0b557b;
+    --color-ocean-700: #0a3e65;
+    --color-ocean-800: #072e4d;
+    --color-ocean-900: #031227;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: var(--font-sans);
+}
+
+.font-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+/* ---------- UNDERWATER HERO ---------- */
+.hero-water {
+    background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgb(255 235 180 / 0.55), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 50% 5%, rgb(200 164 94 / 0.3), transparent 65%),
+        linear-gradient(180deg,
+            #0b557b 0%,
+            #0a3e65 18%,
+            #072e4d 40%,
+            #041f38 65%,
+            #021022 100%);
+    background-size: 130% 130%, 130% 130%, 100% 100%;
+    animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes drift {
+    0%, 100% {
+        background-position: 50% 0%, 50% 0%, 0 0;
+    }
     50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
+        background-position: 52% 5%, 48% 3%, 0 0;
     }
 }
 
-@keyframes underwater-current {
-    0% {
-        background-position: 50% 0%;
-    }
-
-    50% {
-        background-position: 50% 100%;
-    }
-
-    100% {
-        background-position: 50% 0%;
-    }
+.water-surface {
+    background:
+        radial-gradient(75% 50% at 50% 0%, rgb(255 239 200 / 0.65), transparent 70%),
+        repeating-linear-gradient(95deg,
+            transparent 0%,
+            transparent 8%,
+            rgb(220 245 255 / 0.12) 11%,
+            transparent 14%);
+    background-size: 100% 100%, 180% 100%;
+    opacity: 0.85;
+    animation: surface-wave 14s linear infinite;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 0.6) 30%, transparent 70%);
+            mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 0.6) 30%, transparent 70%);
 }
 
 @keyframes surface-wave {
     0% {
-        background-position: 0% 0%, 50% 0%;
+        background-position: 0 0, 0% 0%;
     }
-
-    50% {
-        background-position: 100% 0%, 50% 0%;
-    }
-
     100% {
-        background-position: 0% 0%, 50% 0%;
+        background-position: 0 0, 100% 0%;
     }
 }
 
-@keyframes rays-sway {
-    0% {
-        opacity: 0.66;
-        transform: translate3d(0, -2%, 0) scale(1.08) rotate(-2deg);
-    }
+.ray {
+    position: absolute;
+    top: -10%;
+    width: 18vw;
+    height: 130%;
+    background: linear-gradient(180deg, rgb(255 235 180 / 0.32), rgb(255 235 180 / 0.08) 35%, transparent 75%);
+    transform-origin: top center;
+    filter: blur(8px);
+    mix-blend-mode: screen;
+    animation: ray-sway 9s ease-in-out infinite;
+}
 
+.ray.r1 {
+    left: 5%;
+    --r: -8deg;
+    animation-delay: -0.5s;
+}
+.ray.r2 {
+    left: 22%;
+    width: 12vw;
+    opacity: 0.8;
+    --r: -3deg;
+    animation-delay: -2s;
+}
+.ray.r3 {
+    left: 42%;
+    width: 22vw;
+    --r: 2deg;
+    animation-delay: -4s;
+}
+.ray.r4 {
+    left: 64%;
+    width: 14vw;
+    opacity: 0.85;
+    --r: 6deg;
+    animation-delay: -1s;
+}
+.ray.r5 {
+    left: 80%;
+    width: 16vw;
+    --r: 10deg;
+    animation-delay: -3s;
+}
+
+@keyframes ray-sway {
+    0%, 100% {
+        transform: rotate(var(--r, 0deg)) translateX(0);
+        opacity: 0.7;
+    }
     50% {
+        transform: rotate(calc(var(--r, 0deg) + 1.5deg)) translateX(1vw);
+        opacity: 1;
+    }
+}
+
+.sun {
+    position: absolute;
+    top: -8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 30vh;
+    background: radial-gradient(ellipse at 50% 50%, rgb(255 230 170 / 0.85), rgb(255 200 130 / 0.35) 30%, transparent 70%);
+    filter: blur(20px);
+    mix-blend-mode: screen;
+    animation: sun-pulse 8s ease-in-out infinite;
+}
+
+@keyframes sun-pulse {
+    0%, 100% {
         opacity: 0.9;
-        transform: translate3d(0, 1.5%, 0) scale(1.16) rotate(2deg);
+        transform: translateX(-50%) scale(1);
     }
-
-    100% {
-        opacity: 0.66;
-        transform: translate3d(0, -2%, 0) scale(1.08) rotate(-2deg);
-    }
-}
-
-@keyframes sun-glow {
-    0% {
-        opacity: 0.72;
-        transform: translate3d(0, -3%, 0) scale(0.97);
-    }
-
     50% {
-        opacity: 0.95;
-        transform: translate3d(0, 0, 0) scale(1.04);
-    }
-
-    100% {
-        opacity: 0.72;
-        transform: translate3d(0, -3%, 0) scale(0.97);
+        opacity: 1;
+        transform: translateX(-50%) scale(1.05);
     }
 }
 
-@keyframes particles-drift {
-    0% {
-        transform: translate3d(0, 0, 0);
-        opacity: 0.34;
-    }
-
-    50% {
-        transform: translate3d(0, -2.5%, 0);
-        opacity: 0.52;
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-        opacity: 0.34;
-    }
-}
-
-.hero-underwater-bg {
-    position: relative;
-    overflow: hidden;
-    background:
-        radial-gradient(circle at 50% -8%, rgb(167 243 255 / 0.22), transparent 38%),
-        linear-gradient(180deg,
-            #0b557b 0%,
-            #0a3e65 20%,
-            #072e4d 42%,
-            #041f38 62%,
-            #031227 100%);
-    background-size: 130% 130%, 100% 100%;
-    animation: underwater-current 14s ease-in-out infinite;
-}
-
-.hero-underwater-bg::before {
-    content: "";
+.bubbles {
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(circle at 22% 58%, rgb(56 189 248 / 0.14), transparent 46%),
-        radial-gradient(circle at 78% 38%, rgb(45 212 191 / 0.11), transparent 44%);
-    mix-blend-mode: screen;
+    overflow: hidden;
+    pointer-events: none;
 }
 
-.hero-water-surface {
-    background:
-        radial-gradient(70% 48% at 50% 0%, rgb(219 248 255 / 0.58), transparent 70%),
-        repeating-linear-gradient(95deg,
-            transparent 0%,
-            transparent 8%,
-            rgb(210 245 255 / 0.11) 12%,
-            transparent 16%);
-    background-size: 100% 100%, 180% 100%;
-    background-position: 50% 0%, 0% 0%;
-    opacity: 0.72;
-    animation: surface-wave 12s linear infinite;
-    mask-image: linear-gradient(to bottom, #000 0%, rgb(0 0 0 / 0.72) 34%, transparent 70%);
+.bubble {
+    position: absolute;
+    bottom: -10vh;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgb(255 255 255 / 0.55), rgb(255 255 255 / 0.08) 60%, transparent 70%);
+    border: 1px solid rgb(255 255 255 / 0.15);
+    animation: rise linear infinite;
+    opacity: 0;
 }
 
-.animate-gradient {
-    background-size: 200% auto;
-    animation: gradient 3s linear infinite;
+@keyframes rise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) translateX(var(--drift, 2vw));
+        opacity: 0;
+    }
+}
+
+.shore {
+    background: linear-gradient(180deg, #021022 0%, #0a2540 30%, #2a3a4a 50%, #8a7a5e 75%, #c8a45e 88%, #f5ede0 100%);
+    height: 12vh;
+}
+
+.serif-h2 {
+    line-height: 1.05;
+}
+
+.serif-em {
+    font-style: italic;
+    color: var(--color-sand-500);
+}
+
+.paper {
+    background: #fbf8f1;
+    border: 1px solid rgb(26 24 21 / 0.06);
+    box-shadow: 0 1px 0 rgb(26 24 21 / 0.04);
+}
+
+.link-arrow {
+    transition: gap 0.2s ease;
+}
+.link-arrow:hover {
+    gap: 12px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-400);
+    font-weight: 500;
+}
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] .faq-plus {
+    transform: rotate(45deg);
+}
+.faq-plus {
+    transition: transform 0.25s ease;
+}
+
+.placeholder {
+    background-image:
+        repeating-linear-gradient(45deg, rgb(180 137 68 / 0.1) 0 8px, transparent 8px 16px),
+        linear-gradient(180deg, #ece0c8, #dcc9a4);
+    color: #6b6660;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+}
+
+.nav-cream {
+    background: rgb(245 237 224 / 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(26 24 21 / 0.06);
 }
 
 @media (prefers-reduced-motion: reduce) {
-
-    .hero-underwater-bg,
-    .hero-water-surface,
-    .animate-gradient {
-        animation: none;
+    .hero-water,
+    .water-surface,
+    .ray,
+    .sun,
+    .bubble {
+        animation: none !important;
     }
-}
-
-html {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, sans-serif;
-    scroll-behavior: smooth;
 }
