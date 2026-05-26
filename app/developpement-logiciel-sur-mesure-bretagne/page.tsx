@@ -52,7 +52,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function DeveloppementLogicielSurMesurePage() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <>
       <StructuredData
         entries={[
           personSchema,
@@ -92,6 +92,6 @@ export default function DeveloppementLogicielSurMesurePage() {
         ctaLabel="Besoin d'un logiciel métier adapté à votre activité ?"
       />
       <Footer />
-    </div>
+    </>
   );
 }

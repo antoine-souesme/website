@@ -1,24 +1,30 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const pathname = usePathname();
+  const hasDarkHero = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (!hasDarkHero) return;
     const onScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight * 0.85);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [hasDarkHero]);
+
+  const onCream = !hasDarkHero || isScrolled;
 
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-500 ${
-        isScrolled ? "nav-cream text-ink-900" : "text-white"
+        onCream ? "nav-cream text-ink-900" : "text-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between gap-6">
