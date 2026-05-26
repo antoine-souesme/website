@@ -43,7 +43,7 @@ const SeoServicePage = ({
           <div className="mt-10 flex flex-wrap gap-2">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-ink-900/15 text-sm text-ink-700">
               <span className="w-1.5 h-1.5 rounded-full bg-sand-400" />
-              Expertise — {primaryKeyword}
+              Expertise : {primaryKeyword}
             </span>
             {secondaryKeywords.map((keyword) => (
               <span

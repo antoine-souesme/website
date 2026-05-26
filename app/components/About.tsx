@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const About = () => {
   return (
     <section id="about" className="py-28 px-6 bg-sand-100">
@@ -9,8 +11,15 @@ const About = () => {
               Dix ans à construire des choses{" "}
               <span className="serif-em">utiles</span>.
             </h2>
-            <div className="placeholder rounded-md aspect-[4/5] grid place-items-center">
-              <span>[ portrait — photo Antoine ]</span>
+            <div className="relative aspect-square rounded-md overflow-hidden bg-sand-200">
+              <Image
+                src="/images/pp_square.png"
+                alt="Portrait d'Antoine Souesme"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
 
@@ -53,8 +62,8 @@ const About = () => {
                   <p>
                     <strong className="text-ink-900 font-medium">
                       Vision complète
-                    </strong>{" "}
-                    — De la conception à la livraison, je prends en charge tous
+                    </strong>
+                    . De la conception à la livraison, je prends en charge tous
                     les aspects de votre projet.
                   </p>
                 </li>
@@ -65,8 +74,8 @@ const About = () => {
                   <p>
                     <strong className="text-ink-900 font-medium">
                       Full-stack
-                    </strong>{" "}
-                    — Front-end, back-end, mobile, desktop : je maîtrise toute
+                    </strong>
+                    . Front-end, back-end, mobile, desktop : je maîtrise toute
                     la stack pour une cohérence optimale.
                   </p>
                 </li>
@@ -77,8 +86,8 @@ const About = () => {
                   <p>
                     <strong className="text-ink-900 font-medium">
                       Qualité du code
-                    </strong>{" "}
-                    — Code propre, maintenable et évolutif. Parce qu&apos;un
+                    </strong>
+                    . Code propre, maintenable et évolutif. Parce qu&apos;un
                     projet réussi se pense sur le long terme.
                   </p>
                 </li>
@@ -89,8 +98,8 @@ const About = () => {
                   <p>
                     <strong className="text-ink-900 font-medium">
                       Collaboration
-                    </strong>{" "}
-                    — Renforcement d&apos;équipe, mentorat, ou prise en charge
+                    </strong>
+                    . Renforcement d&apos;équipe, mentorat, ou prise en charge
                     complète : je m&apos;adapte à vos besoins.
                   </p>
                 </li>

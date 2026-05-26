@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="mt-10 space-y-5">
               <div className="flex items-center gap-3 text-sand-100/85">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
-                <span>Actuellement disponible — réponse sous 24h.</span>
+                <span>Actuellement disponible, réponse sous 24h.</span>
               </div>
 
               <a

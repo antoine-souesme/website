@@ -58,7 +58,7 @@ const Hero = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-24 min-h-screen flex flex-col justify-center">
         <p className="eyebrow text-sand-300 mb-6">
-          Développeur freelance — Centre Bretagne
+          Développeur freelance · Centre Bretagne
         </p>
 
         <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight max-w-5xl">
@@ -92,7 +92,7 @@ const Hero = () => {
           </Link>
           <div className="text-sm text-white/75 flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
-            Disponible — premier retour sous 24h
+            Disponible, premier retour sous 24h
           </div>
         </div>
 
