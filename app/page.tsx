@@ -33,7 +33,7 @@ export default function Home() {
   const homeFaqSchema = faqSchemaFromItems(homeFaqItems);
 
   return (
-    <div className="min-h-screen bg-slate-900">
+    <>
       <StructuredData
         entries={[personSchema, professionalServiceSchema, homeFaqSchema]}
       />
@@ -48,6 +48,6 @@ export default function Home() {
       <Faq />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }

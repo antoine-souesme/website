@@ -52,7 +52,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function CreationSiteInternetSurMesurePage() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <>
       <StructuredData
         entries={[
           personSchema,
@@ -92,6 +92,6 @@ export default function CreationSiteInternetSurMesurePage() {
         ctaLabel="Vous voulez un site internet qui génère des opportunités ?"
       />
       <Footer />
-    </div>
+    </>
   );
 }

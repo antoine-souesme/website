@@ -1,7 +1,22 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
+import { Geist, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { buildPageMetadata, seoKeywords, siteUrl } from "./lib/seo";
+
+const geist = Geist({
+    subsets: ["latin"],
+    variable: "--font-geist",
+    display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+    subsets: ["latin"],
+    weight: "400",
+    style: ["normal", "italic"],
+    variable: "--font-instrument-serif",
+    display: "swap",
+});
 
 const defaultMetadata = buildPageMetadata({
     title:
@@ -46,12 +61,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr">
+        <html lang="fr" className={`${geist.variable} ${instrumentSerif.variable}`}>
             <head>
                 <meta name="apple-mobile-web-app-title" content="Antoine Souesme" />
             </head>
 
-            <body>{children}</body>
+            <body className="bg-sand-100 text-ink-900 antialiased">{children}</body>
 
             {/* https://vercel.com/docs/analytics/package */}
             <Analytics />

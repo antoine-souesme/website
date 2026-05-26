@@ -52,7 +52,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function DeveloppeurFreelanceBretagnePage() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <>
       <StructuredData
         entries={[
           personSchema,
@@ -92,6 +92,6 @@ export default function DeveloppeurFreelanceBretagnePage() {
         ctaLabel="Besoin d'un développeur freelance pour renforcer votre équipe ?"
       />
       <Footer />
-    </div>
+    </>
   );
 }

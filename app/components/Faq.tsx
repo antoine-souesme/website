@@ -1,32 +1,37 @@
-import { ChevronDown } from "lucide-react";
 import { homeFaqItems } from "../lib/seo";
 
 const Faq = () => {
   return (
-    <section id="faq" className="py-20 px-4 bg-slate-800">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center animate-gradient bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          FAQ
-        </h2>
-        <p className="text-lg text-slate-300 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
-          Réponses aux questions les plus fréquentes pour un projet web ou
-          logiciel en Centre Bretagne.
-        </p>
+    <section id="faq" className="py-28 px-6 bg-sand-100">
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-12">
+          <p className="eyebrow mb-4">FAQ</p>
+          <h2 className="font-display text-5xl md:text-6xl serif-h2 mb-6">
+            Vos <span className="serif-em">questions</span>, mes réponses.
+          </h2>
+          <p className="text-ink-700 text-lg leading-relaxed">
+            Réponses aux questions les plus fréquentes pour un projet web ou
+            logiciel en Centre Bretagne.
+          </p>
+        </div>
 
-        <div className="space-y-4">
+        <div className="border-t border-ink-900/10">
           {homeFaqItems.map((item) => (
             <details
               key={item.question}
-              className="bg-slate-900/70 border border-slate-700 rounded-xl p-5 group"
+              className="border-b border-ink-900/10 group py-6"
             >
-              <summary className="cursor-pointer text-white font-semibold list-none pr-6 relative">
-                {item.question}
-                <ChevronDown
-                  size={18}
-                  className="absolute right-0 top-0.5 text-slate-400 transition-transform group-open:rotate-180"
-                />
+              <summary className="cursor-pointer flex items-start justify-between gap-6">
+                <span className="font-display text-2xl md:text-3xl leading-snug">
+                  {item.question}
+                </span>
+                <span className="faq-plus text-sand-500 text-3xl leading-none mt-1 font-light">
+                  +
+                </span>
               </summary>
-              <p className="mt-3 text-slate-300 leading-relaxed">{item.answer}</p>
+              <p className="mt-4 text-ink-700 leading-relaxed max-w-3xl">
+                {item.answer}
+              </p>
             </details>
           ))}
         </div>
