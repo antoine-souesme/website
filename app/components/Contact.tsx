@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import RevealContact from "./RevealContact";
+
 type ContactFormData = {
   name: string;
   email: string;
@@ -83,6 +85,26 @@ const Contact = () => {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]" />
                 <span>Actuellement disponible, réponse sous 24h.</span>
               </div>
+
+              <RevealContact
+                label="Email"
+                scheme="mailto"
+                encodedDisplay="bW9jLmxpYW1nQG9ycC5lbXNldW9zLmVuaW90bmE="
+                encodedHref="bW9jLmxpYW1nQG9ycC5lbXNldW9zLmVuaW90bmE="
+                icon={
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#c8a45e"
+                    strokeWidth="1.5"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="M2 7l10 6 10-6" />
+                  </svg>
+                }
+              />
 
               <a
                 href="https://www.linkedin.com/in/antoine-souesme-07329574/"
