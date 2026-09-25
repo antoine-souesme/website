@@ -37,12 +37,14 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Développeur freelance Bretagne et Centre Bretagne",
+  title: "Développeur freelance en renfort d'équipe en Bretagne",
   description:
-    "Développeur freelance en Bretagne et Centre Bretagne. Accompagnement technique sur mesure pour sites internet et logiciels.",
+    "Développeur freelance en Bretagne pour renforcer votre équipe technique : prise en charge de fonctionnalités, intégration à vos outils et à votre façon de travailler.",
   path,
   keywords: [
     "développeur freelance bretagne",
+    "renfort équipe développement",
+    "mission freelance développeur",
     "développeur centre bretagne",
     "freelance web bretagne",
     "renfort développement bretagne",
@@ -67,8 +69,8 @@ export default function DeveloppeurFreelanceBretagnePage() {
       <Navbar />
       <SeoServicePage
         eyebrow="Freelance Bretagne"
-        h1="Développeur freelance en Bretagne et Centre Bretagne"
-        intro="Je vous accompagne pour accélérer vos projets digitaux avec une approche pragmatique: objectifs clairs, exécution rapide et qualité technique durable."
+        h1="Développeur freelance en renfort de votre équipe en Bretagne"
+        intro="Votre équipe a plus de travail que de bras ? Je la rejoins le temps d'une mission pour prendre en charge des fonctionnalités de bout en bout, dans vos outils et à votre rythme."
         primaryKeyword="développeur freelance bretagne"
         secondaryKeywords={[
           "développeur centre bretagne",
@@ -88,6 +90,19 @@ export default function DeveloppeurFreelanceBretagnePage() {
           "Pilotage orienté résultat pour TPE, PME et équipes produit",
           "Capacité à intervenir rapidement selon les priorités",
         ]}
+        caseStudy={{
+          eyebrow: "Mission réalisée",
+          title: "Renfort de l'équipe technique de Cool Cars",
+          context:
+            "Cool Cars gère des flottes de véhicules proposés à la location. J'ai rejoint son équipe de développement pour faire avancer la plateforme en parallèle des autres développeurs.",
+          deliverables: [
+            "Prise en main d'une base de code existante et de ses règles de travail",
+            "Développement de fonctionnalités complètes, de l'interface jusqu'au serveur",
+            "Travail en commun avec l'équipe : relectures de code et corrections suite aux retours",
+            "Livraisons régulières, fonctionnalité par fonctionnalité",
+          ],
+          stack: ["Vue.js", "TypeScript", "Firebase", "Fastify"],
+        }}
         faqItems={faqItems}
         ctaLabel="Besoin d'un développeur freelance pour renforcer votre équipe ?"
       />

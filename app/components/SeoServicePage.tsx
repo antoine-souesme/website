@@ -5,6 +5,14 @@ type FaqItem = {
   answer: string;
 };
 
+type CaseStudy = {
+  eyebrow: string;
+  title: string;
+  context: string;
+  deliverables: string[];
+  stack: string[];
+};
+
 type SeoServicePageProps = {
   eyebrow: string;
   h1: string;
@@ -15,6 +23,7 @@ type SeoServicePageProps = {
   localValuePoints: string[];
   faqItems: FaqItem[];
   ctaLabel: string;
+  caseStudy?: CaseStudy;
 };
 
 const SeoServicePage = ({
@@ -27,6 +36,7 @@ const SeoServicePage = ({
   localValuePoints,
   faqItems,
   ctaLabel,
+  caseStudy,
 }: SeoServicePageProps) => {
   return (
     <main className="bg-sand-100 text-ink-900">
@@ -93,7 +103,43 @@ const SeoServicePage = ({
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-sand-100">
+      {caseStudy && (
+        <section className="py-20 px-6 bg-sand-100">
+          <div className="max-w-5xl mx-auto">
+            <p className="eyebrow mb-4">{caseStudy.eyebrow}</p>
+            <h2 className="font-display text-4xl md:text-5xl serif-h2 mb-6 max-w-4xl">
+              {caseStudy.title}
+            </h2>
+            <p className="text-lg text-ink-700 leading-relaxed max-w-3xl mb-10">
+              {caseStudy.context}
+            </p>
+            <div className="paper rounded-2xl p-10">
+              <ul className="space-y-3 text-ink-700">
+                {caseStudy.deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sand-400 mt-2.5 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {caseStudy.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 rounded-full border border-ink-900/10 text-sm text-ink-500"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section
+        className={`py-20 px-6 ${caseStudy ? "bg-sand-50 border-t border-ink-900/5" : "bg-sand-100"}`}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <p className="eyebrow mb-4">Questions fréquentes</p>

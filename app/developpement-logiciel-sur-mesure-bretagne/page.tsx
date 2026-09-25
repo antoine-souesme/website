@@ -37,11 +37,12 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Développement de logiciel sur mesure en Bretagne",
+  title: "Développement sur mesure en Bretagne : logiciel métier",
   description:
-    "Développement de logiciel sur mesure en Bretagne et Centre Bretagne. Applications métier robustes, évolutives et adaptées à vos processus.",
+    "Développement sur mesure en Bretagne et Centre Bretagne : logiciels et applications métier robustes, évolutives et adaptées à vos processus.",
   path,
   keywords: [
+    "développement sur mesure bretagne",
     "logiciel sur mesure bretagne",
     "développement logiciel centre bretagne",
     "application métier sur mesure",
@@ -67,7 +68,7 @@ export default function DeveloppementLogicielSurMesurePage() {
       <Navbar />
       <SeoServicePage
         eyebrow="Logiciel métier"
-        h1="Développement de logiciel sur mesure en Bretagne"
+        h1="Développement sur mesure en Bretagne : votre logiciel métier"
         intro="Je développe des logiciels métier qui simplifient vos opérations quotidiennes et rendent vos données plus exploitables pour piloter l'activité."
         primaryKeyword="logiciel sur mesure bretagne"
         secondaryKeywords={[
@@ -88,6 +89,20 @@ export default function DeveloppementLogicielSurMesurePage() {
           "Livraison incrémentale pour obtenir de la valeur vite",
           "Support fiable après la mise en service",
         ]}
+        caseStudy={{
+          eyebrow: "Projet réalisé",
+          title: "Cool Cars : des fonctionnalités pour une plateforme de gestion de flotte",
+          context:
+            "Cool Cars gère des flottes de véhicules proposés à la location. Au sein de l'équipe de développement, j'ai conçu et développé plusieurs fonctionnalités de la plateforme.",
+          deliverables: [
+            "Des règles de changement de prix automatique, avec des exclusions par groupe de véhicules et par dates",
+            "Des alertes sur les locations, par exemple quand des frais de carburant n'ont pas été facturés",
+            "L'envoi de messages aux clients via la plateforme de location Getaround",
+            "Un planning des véhicules pour les gestionnaires, repris en version réduite dans l'application des préparateurs sur le terrain",
+            "Des filtres par groupe de véhicules et le suivi des places réelles dans les parkings",
+          ],
+          stack: ["Vue.js", "TypeScript", "Firebase", "Fastify"],
+        }}
         faqItems={faqItems}
         ctaLabel="Besoin d'un logiciel métier adapté à votre activité ?"
       />
