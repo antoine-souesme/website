@@ -47,6 +47,9 @@ const Navbar = () => {
           <Link href="/#methode" className="opacity-80 hover:opacity-100">
             Méthode
           </Link>
+          <Link href="/tarifs" className="opacity-80 hover:opacity-100">
+            Tarifs
+          </Link>
           <Link href="/#faq" className="opacity-80 hover:opacity-100">
             FAQ
           </Link>

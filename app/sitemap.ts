@@ -6,6 +6,7 @@ const pages = [
   "/developpeur-freelance-bretagne",
   "/creation-site-internet-sur-mesure-bretagne",
   "/developpement-logiciel-sur-mesure-bretagne",
+  "/tarifs",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
