@@ -37,11 +37,12 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Développement de logiciel sur mesure en Bretagne",
+  title: "Développement sur mesure en Bretagne : logiciel métier",
   description:
-    "Développement de logiciel sur mesure en Bretagne et Centre Bretagne. Applications métier robustes, évolutives et adaptées à vos processus.",
+    "Développement sur mesure en Bretagne et Centre Bretagne : logiciels et applications métier robustes, évolutives et adaptées à vos processus.",
   path,
   keywords: [
+    "développement sur mesure bretagne",
     "logiciel sur mesure bretagne",
     "développement logiciel centre bretagne",
     "application métier sur mesure",
@@ -67,7 +68,7 @@ export default function DeveloppementLogicielSurMesurePage() {
       <Navbar />
       <SeoServicePage
         eyebrow="Logiciel métier"
-        h1="Développement de logiciel sur mesure en Bretagne"
+        h1="Développement sur mesure en Bretagne : votre logiciel métier"
         intro="Je développe des logiciels métier qui simplifient vos opérations quotidiennes et rendent vos données plus exploitables pour piloter l'activité."
         primaryKeyword="logiciel sur mesure bretagne"
         secondaryKeywords={[
@@ -88,6 +89,20 @@ export default function DeveloppementLogicielSurMesurePage() {
           "Livraison incrémentale pour obtenir de la valeur vite",
           "Support fiable après la mise en service",
         ]}
+        caseStudy={{
+          eyebrow: "Projet réalisé",
+          title: "Cool Cars : une plateforme de gestion de flotte automobile",
+          context:
+            "Cool Cars gère des flottes de véhicules proposés à la location. J'ai conçu et développé la plateforme qui centralise le suivi des véhicules, des locations et des interventions sur le terrain.",
+          deliverables: [
+            "Un tableau de bord pour les gestionnaires de flotte : contrôle photo des véhicules, sinistres, maintenance, planning et carte des parkings",
+            "Une application mobile pour les préparateurs sur le terrain, qui suivent le nettoyage et le contrôle des véhicules",
+            "Un portail où les clients retrouvent et téléchargent eux-mêmes leurs factures",
+            "Une synchronisation automatique avec la plateforme de location Getaround",
+            "Des droits d'accès par rôle, pour que chacun ne voie que ce qui le concerne",
+          ],
+          stack: ["Vue.js", "TypeScript", "Firebase", "Fastify"],
+        }}
         faqItems={faqItems}
         ctaLabel="Besoin d'un logiciel métier adapté à votre activité ?"
       />
