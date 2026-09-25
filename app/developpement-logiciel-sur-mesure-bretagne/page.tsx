@@ -91,15 +91,15 @@ export default function DeveloppementLogicielSurMesurePage() {
         ]}
         caseStudy={{
           eyebrow: "Projet réalisé",
-          title: "Cool Cars : une plateforme de gestion de flotte automobile",
+          title: "Cool Cars : des fonctionnalités pour une plateforme de gestion de flotte",
           context:
-            "Cool Cars gère des flottes de véhicules proposés à la location. J'ai conçu et développé la plateforme qui centralise le suivi des véhicules, des locations et des interventions sur le terrain.",
+            "Cool Cars gère des flottes de véhicules proposés à la location. Au sein de l'équipe de développement, j'ai conçu et développé plusieurs fonctionnalités de la plateforme.",
           deliverables: [
-            "Un tableau de bord pour les gestionnaires de flotte : contrôle photo des véhicules, sinistres, maintenance, planning et carte des parkings",
-            "Une application mobile pour les préparateurs sur le terrain, qui suivent le nettoyage et le contrôle des véhicules",
-            "Un portail où les clients retrouvent et téléchargent eux-mêmes leurs factures",
-            "Une synchronisation automatique avec la plateforme de location Getaround",
-            "Des droits d'accès par rôle, pour que chacun ne voie que ce qui le concerne",
+            "Des règles de changement de prix automatique, avec des exclusions par groupe de véhicules et par dates",
+            "Des alertes sur les locations, par exemple quand des frais de carburant n'ont pas été facturés",
+            "L'envoi de messages aux clients via la plateforme de location Getaround",
+            "Un planning des véhicules pour les gestionnaires, repris en version réduite dans l'application des préparateurs sur le terrain",
+            "Des filtres par groupe de véhicules et le suivi des places réelles dans les parkings",
           ],
           stack: ["Vue.js", "TypeScript", "Firebase", "Fastify"],
         }}
