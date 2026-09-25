@@ -38,11 +38,14 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between gap-6">
-        <Link href="/" className="flex items-center gap-2.5 text-current">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 text-current shrink-0"
+        >
           <span className="w-8 h-8 rounded-full bg-sand-400 grid place-items-center text-ink-900 font-display text-lg">
             A
           </span>
-          <span className="font-display text-lg leading-none">
+          <span className="font-display text-lg leading-none whitespace-nowrap">
             Antoine Souesme
           </span>
         </Link>
@@ -62,7 +65,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <Link
             href="/#contact"
-            className="text-sm inline-flex items-center gap-2 px-4 py-2 rounded-full border border-current/30 hover:bg-current/5 transition"
+            className="hidden sm:inline-flex text-sm items-center gap-2 px-4 py-2 rounded-full border border-current/30 hover:bg-current/5 transition whitespace-nowrap"
           >
             Me contacter
             <svg
@@ -121,6 +124,23 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <Link
+            href="/#contact"
+            onClick={closeMenu}
+            className="sm:hidden mt-6 flex items-center justify-center gap-3 px-7 py-4 bg-ink-900 text-sand-50 rounded-full font-medium"
+          >
+            Me contacter
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
         </div>
       )}
     </nav>
