@@ -86,7 +86,7 @@ const Navbar = () => {
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
-            className="md:hidden w-10 h-10 grid place-items-center rounded-full border border-current/30 hover:bg-current/5 transition"
+            className="md:hidden shrink-0 w-10 h-10 p-0 grid place-items-center rounded-full border border-current/30 hover:bg-current/5 transition"
           >
             <svg
               width="18"
