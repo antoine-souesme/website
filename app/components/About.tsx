@@ -11,12 +11,12 @@ const About = () => {
               Dix ans à construire des choses{" "}
               <span className="serif-em">utiles</span>.
             </h2>
-            <div className="relative aspect-square rounded-md overflow-hidden bg-sand-200">
+            <div className="relative aspect-square w-full max-w-xs lg:max-w-none rounded-md overflow-hidden bg-sand-200">
               <Image
                 src="/images/pp_square.png"
                 alt="Portrait d'Antoine Souesme"
                 fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                sizes="(min-width: 1024px) 40vw, 320px"
                 className="object-cover"
                 priority
               />

@@ -224,6 +224,12 @@ const SeoServicePage = ({
             >
               Logiciel sur mesure
             </Link>
+            <Link
+              href="/tarifs"
+              className="link-arrow inline-flex items-center gap-1 hover:text-ink-900 transition-colors"
+            >
+              Tarifs
+            </Link>
           </div>
         </div>
       </section>

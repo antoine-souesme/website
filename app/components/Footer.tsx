@@ -14,6 +14,7 @@ const links = [
     label: "Développement logiciel sur mesure",
     href: "/developpement-logiciel-sur-mesure-bretagne",
   },
+  { label: "Tarifs", href: "/tarifs" },
   { label: "Contact", href: "/#contact" },
 ];
 
